@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,7 +7,27 @@
     <title>Vite + React</title>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <div class="app">
+        <div class="app__content">
+          <header class="header">wtwr°</header>
+          <main>
+            <section class="weather-card">
+              <p class="weather-card__temp">75 ° F</p>
+              <img
+                src="./src/assets/sunny.png"
+                alt="sunny"
+                class="weather-card__image"
+              />
+            </section>
+            <section class="cards">
+              <p class="cards__text">Today is 75°F / You may want to wear:</p>
+              <div class="cards__list"></div>
+            </section>
+          </main>
+        </div>
+      </div>
+    </div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
