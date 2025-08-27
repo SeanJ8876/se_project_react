@@ -4,9 +4,11 @@ function ItemModal({ onClose, card }) {
   return (
     <div className="modal modal_opened">
       <div className="modal__content modal__content_type_image">
-        <button onClick={onClose} type="button" className="modal__close">
-          <img src="../images/close-button.png" alt="x" />
-        </button>
+        <button
+          onClick={onClose}
+          type="button"
+          className="modal__close"
+        ></button>
         <img src={card.link} alt={card.name} className="modal__image" />
         <div className="modal__footer">
           {" "}

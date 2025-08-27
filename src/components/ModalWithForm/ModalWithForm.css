@@ -44,24 +44,29 @@
 
 .modal__title {
   margin: 0 0 24px 0;
-  font-family: "Cabinet Grotesk", sans-serif;
+  font-family: "Cabinet Grotesk";
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
-  color: #1f2937;
+  color: rgba(0, 0, 0, 1);
 }
 
 .modal__close {
   position: absolute;
+  padding: 0;
+  width: 24px;
+  height: 24px;
   top: 20px;
   right: 28px;
   border: none;
   padding: 8px;
   border-radius: 50%;
   background-image: url("../../assets/close-button.png");
+  background-repeat: no-repeat;
 }
 
 img.modal__close-icon {
+  padding: 0;
   width: 24px;
   height: 24px;
 }
@@ -107,7 +112,7 @@ img.modal__close-icon {
   border-bottom: 1px solid #000000;
   border-radius: 0;
   font-size: 16px;
-  font-family: "Cabinet Grotesk", sans-serif;
+  font-family: "Cabinet Grotesk";
   color: #374151;
   background-color: transparent;
   transition: all 0.2s ease;
@@ -129,7 +134,7 @@ img.modal__close-icon {
   padding: 0;
   display: flex;
   flex-direction: column;
-  font-family: "Cabinet Grotesk", sans-serif;
+  font-family: "Cabinet Grotesk";
   font-weight: 700;
   font-size: 16px;
   line-height: 60px;
@@ -178,7 +183,7 @@ img.modal__close-icon {
 
 .modal__radio-label {
   cursor: pointer;
-  font-family: "Cabinet Grotesk", sans-serif;
+  font-family: "Cabinet Grotesk";
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
@@ -198,7 +203,7 @@ img.modal__close-icon {
   color: white;
   border: none;
   cursor: pointer;
-  font-family: "Cabinet Grotesk", sans-serif;
+  font-family: "Cabinet Grotesk";
   font-weight: 500;
   font-size: 14px;
   transition: all 0.2s ease;
