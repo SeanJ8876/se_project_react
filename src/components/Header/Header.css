@@ -35,13 +35,12 @@
 
 .header__add-clothes-btn {
   margin: 0 20px 0 auto;
-  width: 116px;
   height: 24px;
   top: 8px;
   left: 1015px;
   font-family: Cabinet Grotesk;
   font-weight: 700;
-  font-size: 17px;
+  font-size: 20px;
   border: none;
   color: rgba(0, 0, 0, 1);
 }

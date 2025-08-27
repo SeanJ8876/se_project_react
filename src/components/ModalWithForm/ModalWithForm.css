@@ -25,17 +25,36 @@
   right: 28px;
 }
 
+.modal__close-button {
+}
+
+.modal__submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 124px;
+  height: 36px;
+  background-color: #000;
+  gap: 12px;
+  border-radius: 4px;
+  padding: 4px;
+  color: #ffffff;
+}
+
 .modal__content {
   background-color: #ffffff;
   position: relative;
   padding: 28px 28px 36px;
-  max-width: 496px;
+  width: 496px;
+  height: 436px;
   box-sizing: border-box;
-  width: 100%;
   width: 498px;
-  height: 610px;
-  top: 106px;
   border-radius: 16px;
+}
+
+.modal__content_type_image {
+  padding: 0;
+  overflow: hidden;
 }
 
 .modal__form {
@@ -43,6 +62,7 @@
   flex-direction: column;
   width: 100%;
 }
+
 .modal__label {
   display: block;
   font-weight: 500;
@@ -60,4 +80,9 @@
   padding: 0;
   display: flex;
   flex-direction: column;
+  font-family: Cabinet Grotesk;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 115px;
 }
