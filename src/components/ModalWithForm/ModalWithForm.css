@@ -1,11 +1,10 @@
-
 .modal {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #0000004d;
+  background-color: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(4px);
   display: flex;
   justify-content: center;
@@ -43,36 +42,33 @@
   overflow: hidden;
 }
 
-/* Modal Title */
 .modal__title {
   margin: 0 0 24px 0;
-  font-family: Cabinet Grotesk, sans-serif;
+  font-family: "Cabinet Grotesk", sans-serif;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
   color: #1f2937;
 }
 
-/* Close Button */
 .modal__close {
   position: absolute;
   top: 20px;
   right: 28px;
-  background: none;
   border: none;
-  cursor: pointer;
   padding: 8px;
   border-radius: 50%;
-  transition: background-color 0.2s ease;
-  font-family: Cabinet Grotesk, sans-serif;
-  font-weight: 300;
+  background-image: url("../../assets/close-button.png");
+}
+
+img.modal__close-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.modal__close-icon {
   font-size: 24px;
   color: #9ca3af;
-  width: 32px;
-  height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .modal__close:hover {
@@ -80,12 +76,12 @@
   color: #64748b;
 }
 
-.modal__close-button {
-  font-size: 16px;
-  line-height: 20px;
-  color: #374151;
+.modal__close:hover {
+  background-color: #f1f5f9;
+  color: #64748b;
 }
 
+/* Modal Form */
 .modal__form {
   display: flex;
   flex-direction: column;
@@ -95,14 +91,12 @@
 
 .modal__label {
   display: block;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
-  margin-bottom: 8px;
-  font-family: Cabinet Grotesk, sans-serif;
-  color: #374151;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  font-family: Cabinet Grotesk;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 16px;
+  line-height: 20px;
+  color: rgba(0, 0, 0, 1);
 }
 
 .modal__input {
@@ -113,7 +107,7 @@
   border-bottom: 1px solid #000000;
   border-radius: 0;
   font-size: 16px;
-  font-family: Cabinet Grotesk, sans-serif;
+  font-family: "Cabinet Grotesk", sans-serif;
   color: #374151;
   background-color: transparent;
   transition: all 0.2s ease;
@@ -135,7 +129,7 @@
   padding: 0;
   display: flex;
   flex-direction: column;
-  font-family: Cabinet Grotesk, sans-serif;
+  font-family: "Cabinet Grotesk", sans-serif;
   font-weight: 700;
   font-size: 16px;
   line-height: 60px;
@@ -184,7 +178,7 @@
 
 .modal__radio-label {
   cursor: pointer;
-  font-family: Cabinet Grotesk, sans-serif;
+  font-family: "Cabinet Grotesk", sans-serif;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
@@ -204,7 +198,7 @@
   color: white;
   border: none;
   cursor: pointer;
-  font-family: Cabinet Grotesk, sans-serif;
+  font-family: "Cabinet Grotesk", sans-serif;
   font-weight: 500;
   font-size: 14px;
   transition: all 0.2s ease;
@@ -242,16 +236,4 @@
   .modal__radio-buttons {
     margin-bottom: 24px;
   }
-}
-
-.modal__input:invalid {
-  border-color: #ef4444;
-}
-
-.modal__input:invalid:focus {
-  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
-}
-
-.modal__input:valid:not(:placeholder-shown) {
-  border-color: #10b981;
 }
