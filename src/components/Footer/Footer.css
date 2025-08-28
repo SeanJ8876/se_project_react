@@ -1,0 +1,21 @@
+.footer {
+  padding: 16px 0;
+  background-color: #f8f9fa;
+  text-align: center;
+  width: 1358px;
+  margin-top: auto;
+  height: 20px;
+  top: 778px;
+  left: 40px;
+}
+
+.footer__copyright {
+  font-family: Cabinet Grotesk;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  text-align: right;
+  vertical-align: bottom;
+}

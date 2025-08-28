@@ -4,6 +4,7 @@ import Header from "../Header/Header";
 import "./App.css";
 import { coordinates, APIkey } from "../../utils/constants";
 import Main from "../Main/Main";
+import Footer from "../Footer/Footer";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 import ItemModal from "../ItemModal/ItemModal";
 import { getWeather, filterweatherData } from "../../utils/weatherApi";
@@ -45,6 +46,7 @@ function App() {
       <div className="app__content">
         <Header handleAddClick={handleAddClick} weatherData={weatherData} />
         <Main weatherData={weatherData} handleCardClick={handleCardClick} />
+        <Footer author="Sean Jackson" year={2025} />
         <ModalWithForm
           title="New garment"
           buttonText="Add garment"
