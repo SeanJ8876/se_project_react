@@ -9,8 +9,15 @@
   position: absolute;
   top: 15px;
   margin: 0;
+  padding: 2px 12px 2px 12px;
+  font-weight: 700;
+  font-family: "Cabinet Grotesk";
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0%;
 }
 
 .card__image {
   width: 100%;
 }
+
