@@ -7,13 +7,15 @@ import Main from "../Main/Main";
 import Footer from "../Footer/Footer";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 import ItemModal from "../ItemModal/ItemModal";
-import { getWeather, filterweatherData } from "../../utils/weatherApi";
+import { getWeather, filterWeatherData } from "../../utils/weatherApi";
 
 function App() {
   const [weatherData, setWeatherData] = useState({
     type: "",
     temp: { F: 999, C: 999 },
     city: "",
+    condition: "",
+    isDay: true,
   });
   const [activeModal, setActiveModal] = useState();
   const [selectedCard, setSelectedCard] = useState({});
@@ -35,8 +37,8 @@ function App() {
   useEffect(() => {
     getWeather(coordinates, APIkey)
       .then((data) => {
-        const filteredData = filterweatherData(data);
-        setWeatherData(filteredData);
+        const filteredWeatherData = filterWeatherData(data);
+        setWeatherData(filteredWeatherData);
       })
       .catch((err) => console.log(err));
   }, []);
@@ -50,7 +52,7 @@ function App() {
         <ModalWithForm
           title="New garment"
           buttonText="Add garment"
-          activeModal={activeModal}
+          isOpen={activeModal === "add-garment"}
           onClose={closeActiveModal}
         >
           <label htmlFor="name" className="modal__label">

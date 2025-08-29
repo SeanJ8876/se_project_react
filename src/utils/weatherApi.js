@@ -10,11 +10,13 @@ export const getWeather = ({ latitude, longitude }, APIkey) => {
   });
 };
 
-export const filterweatherData = (data) => {
+export const filterWeatherData = (data) => {
   const result = {};
   result.city = data.name;
   result.temp = { F: data.main.temp };
   result.type = getWeatherType(result.temp.F);
+  result.condition = data.weather[0].main;
+  result.isDay = getIsDay(data);
   return result;
 };
 
@@ -26,4 +28,18 @@ const getWeatherType = (temperature) => {
   } else {
     return "cold";
   }
+};
+
+const getIsDay = (data) => {
+  if (data.sys && data.sys.sunrise && data.sys.sunset) {
+    const currentTime = Math.floor(Date.now() / 1000); // Current time in Unix timestamp
+    return currentTime >= data.sys.sunrise && currentTime < data.sys.sunset;
+  }
+
+  if (data.weather && data.weather[0] && data.weather[0].icon) {
+    const iconCode = data.weather[0].icon;
+    return iconCode.endsWith("day");
+  }
+
+  return true;
 };
