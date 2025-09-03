@@ -1,8 +1,14 @@
 import "./Header.css";
 import logo from "../../assets/logo.svg";
 import avatar from "../../assets/avatar.png";
+import ToggleSwitch from "../App/ToggleSwitch/ToggleSwitch";
 
-function Header({ handleAddClick, weatherData }) {
+function Header({
+  handleAddClick,
+  weatherData,
+  currentTemperatureUnit,
+  handleToggleSwitch,
+}) {
   const currentDate = new Date().toLocaleString("default", {
     month: "long",
     day: "numeric",
@@ -10,10 +16,14 @@ function Header({ handleAddClick, weatherData }) {
 
   return (
     <header className="header">
-      <img className="header__logo" src={logo} />
+      <img className="header__logo" src={logo} alt="WTWR Logo" />
       <p className="header__date-and-location">
         {currentDate}, {weatherData.city}
       </p>
+      <ToggleSwitch
+        currentTemperatureUnit={currentTemperatureUnit}
+        handleToggleSwitch={handleToggleSwitch}
+      />
       <button
         type="button"
         className="header__add-clothes-btn"
