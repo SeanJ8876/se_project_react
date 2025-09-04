@@ -1,12 +1,12 @@
 const weatherOptions = [
   {
     day: true,
-    condition: "clear",
+    condition: "Clear",
     url: new URL("../assets/day/clear.png", import.meta.url).href,
   },
   {
     day: true,
-    condition: "cloudy",
+    condition: "Cloudy",
     url: new URL("../assets/day/cloudy.png", import.meta.url).href,
   },
   {
@@ -21,7 +21,7 @@ const weatherOptions = [
   },
   {
     day: true,
-    condition: "day-rain",
+    condition: "Day-rain",
     url: new URL("../assets/day/day-rain.png", import.meta.url).href,
   },
   {

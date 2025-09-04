@@ -13,7 +13,10 @@ export const getWeather = ({ latitude, longitude }, APIkey) => {
 export const filterWeatherData = (data) => {
   const result = {};
   result.city = data.name;
-  result.temp = { F: Math.round(data.main.temp) };
+  result.temp = {
+    F: Math.round(data.main.temp),
+    C: Math.round(((data.main.temp - 32) * 5) / 9),
+  };
   result.type = getWeatherType(result.temp.F);
   result.condition = data.weather[0].main;
   result.isDay = getIsDay(data);
@@ -32,7 +35,7 @@ const getWeatherType = (temperature) => {
 
 const getIsDay = (data) => {
   if (data.sys && data.sys.sunrise && data.sys.sunset) {
-    const currentTime = Math.floor(Date.now() / 1000); // Current time in Unix timestamp
+    const currentTime = Math.floor(Date.now() / 1000);
     return currentTime >= data.sys.sunrise && currentTime < data.sys.sunset;
   }
 

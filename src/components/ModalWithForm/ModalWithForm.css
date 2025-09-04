@@ -81,7 +81,7 @@ img.modal__close-icon {
 
 .modal__label {
   display: block;
-  font-family: Cabinet Grotesk;
+  font-family: "Cabinet Grotesk", sans-serif;
   font-weight: 700;
   font-style: Bold;
   font-size: 16px;

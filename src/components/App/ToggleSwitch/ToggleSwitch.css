@@ -1,4 +1,4 @@
-.toggle.switch {
+.toggle-switch {
   width: 56px;
   height: 28px;
   border: 2px solid black;
@@ -6,6 +6,7 @@
   cursor: pointer;
   overflow: hidden;
   position: relative;
+  margin-left: auto;
 }
 
 .toggle-switch__checkbox {

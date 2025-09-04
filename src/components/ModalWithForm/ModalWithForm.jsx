@@ -1,6 +1,12 @@
 import "./ModalWithForm.css";
 
-function ModalWithForm({ children, buttonText, title, isOpen, onClose }) {
+const ModalWithForm = ({
+  children,
+  buttonText = "Submit",
+  title,
+  isOpen,
+  onClose,
+}) => {
   return (
     <div className={`modal ${isOpen ? "modal_opened" : ""}`}>
       <div className="modal__content">
@@ -20,6 +26,6 @@ function ModalWithForm({ children, buttonText, title, isOpen, onClose }) {
       </div>
     </div>
   );
-}
+};
 
 export default ModalWithForm;
