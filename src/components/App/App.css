@@ -1,6 +1,7 @@
 .app {
   background-color: #f3f3f3;
   padding: 0 20px;
+  font-family: "Grotesk", sans-serif;
 }
 
 .app__content {

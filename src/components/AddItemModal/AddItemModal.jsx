@@ -1,6 +1,15 @@
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
+import { useform } from "../../hooks/useForm";
 
-const AddItemModal = ({ isOpen, handleSubmit, onClose }) => {
+const AddItemModal = ({ isOpen, onAddItem, onClose }) => {
+  const defaultValues = { name: "", imageUrl: "", weather: "" };
+  const { values, handleChange } = useform({ defaultValues });
+
+  const handleSubmit = (evt) => {
+    evt.preventDefault();
+    onAddItem(values);
+  };
+
   return (
     <ModalWithForm
       title="New garment"
@@ -16,6 +25,8 @@ const AddItemModal = ({ isOpen, handleSubmit, onClose }) => {
           className="modal__input"
           id="name"
           placeholder="name"
+          value={values.name}
+          onChange={handleChange}
         />
       </label>
       <label htmlFor="imageUrl" className="modal__label">
@@ -25,6 +36,8 @@ const AddItemModal = ({ isOpen, handleSubmit, onClose }) => {
           className="modal__input"
           id="imageUrl"
           placeholder="Image URL"
+          value={values.imageUrl}
+          onChange={handleChange}
         />
       </label>
       <fieldset className="modal__radio-buttons">
@@ -35,6 +48,8 @@ const AddItemModal = ({ isOpen, handleSubmit, onClose }) => {
             name="weather"
             type="radio"
             className="modal__radio-input"
+            value="hot"
+            onChange={handleChange}
           />{" "}
           Hot
         </label>
@@ -44,6 +59,8 @@ const AddItemModal = ({ isOpen, handleSubmit, onClose }) => {
             name="weather"
             type="radio"
             className="modal__radio-input"
+            value="warm"
+            onChange={handleChange}
           />{" "}
           Warm
         </label>
@@ -53,6 +70,8 @@ const AddItemModal = ({ isOpen, handleSubmit, onClose }) => {
             name="weather"
             type="radio"
             className="modal__radio-input"
+            value="cold"
+            onChange={handleChange}
           />{" "}
           Cold
         </label>
