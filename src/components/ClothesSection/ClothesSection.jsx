@@ -9,10 +9,9 @@ function ClothesSection({ onCardClick, weatherData }) {
         <p>Your Items</p>
         <button>Add New</button>
       </div>
-      <ul className="cards__list">
+      <ul className="clothes-section__items">
         {defaultClothingItems
           .filter((item) => {
-            // Only filter if weatherData exists and has a type
             return weatherData?.type ? item.weather === weatherData.type : true;
           })
           .map((item) => {

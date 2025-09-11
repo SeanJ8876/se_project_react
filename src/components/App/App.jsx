@@ -12,6 +12,7 @@ import Profile from "../Profile/Profile";
 import { getWeather, filterWeatherData } from "../../utils/weatherApi";
 import { defaultClothingItems } from "../../utils/constants";
 import CurrentTemperatureUnitContext from "../Context/CurrentTemperatureUnitContext";
+import { getItems } from "../../utils/api";
 
 function App() {
   const [weatherData, setWeatherData] = useState({
@@ -54,7 +55,14 @@ function App() {
   };
 
   useEffect(() => {
-    setClothingItems(defaultClothingItems);
+    getItems()
+      .then((data) => {
+        setClothingItems(defaultClothingItems);
+      })
+      .catch((error) => {
+        console.error(error);
+        setClothingItems();
+      });
   }, []);
 
   useEffect(() => {
@@ -85,7 +93,10 @@ function App() {
               }
             />
 
-            <Route path="/profile" element={<Profile />} />
+            <Route
+              path="/profile"
+              element={<Profile onCardClick={handleCardClick} />}
+            />
           </Routes>
           <Footer author="Sean Jackson" year={2025} />
           {/* <ModalWithForm

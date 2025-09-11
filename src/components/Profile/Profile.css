@@ -1,3 +1,71 @@
-.Profile {
+.profile {
   display: flex;
+  gap: 100px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.profile__sidebar {
+  display: flex;
+  flex-direction: column;
+  flex: 325px;
+  height: 56px;
+  top: 119px;
+  left: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.sidebar__username {
+  width: 157px;
+  height: 25px;
+  color: #ffff;
+  font-family: "Cabinet Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 100%;
+  background-color: rgba(0, 0, 0, 1);
+}
+
+/* ClothesSection container inside profile */
+.profile__clothing-items {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ClothesSection item list */
+.clothes-section__items {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  list-style: none;
+  border-radius: 12px;
+  padding: 0;
+  width: 325px;
+  height: 328px;
+  text-align: center;
+}
+
+.card__image {
+  width: 285px;
+  height: 285px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.card__name {
+  margin-top: 1px;
+  padding: 2px, 12px, 2px, 12px;
+  gap: 8px;
+  background-color: rgba(255, 255, 255, 1);
+  font-family: "Cabinet Grotesk", sans-serif;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  color: rgba(0, 0, 0, 0.6);
 }

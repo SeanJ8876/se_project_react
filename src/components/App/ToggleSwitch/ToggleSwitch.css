@@ -40,10 +40,24 @@
 
 .toggle-switch__text_F {
   left: 9px;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  background-color: rgba(255, 255, 255, 1);
+  font-family: "Cabinet Grotesk";
 }
 
 .toggle-switch__text_C {
   right: 9px;
+  font-family: Cabinet Grotesk;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .toggle-switch__checkbox:checked ~ .toggle-switch__circle {
