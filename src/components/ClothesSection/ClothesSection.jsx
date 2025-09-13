@@ -5,9 +5,9 @@ import ItemCard from "../ItemCard/ItemCard";
 function ClothesSection({ onCardClick, weatherData }) {
   return (
     <div className="clothes-section">
-      <div>
-        <p>Your Items</p>
-        <button>Add New</button>
+      <div className="clothes-section__header">
+        <p className="clothes-section__title">Your items</p>
+        <button className="clothes-section__add-btn">+ Add New</button>
       </div>
       <ul className="clothes-section__items">
         {defaultClothingItems

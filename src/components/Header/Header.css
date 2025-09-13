@@ -16,13 +16,9 @@
 }
 
 .header__date-and-location {
-  width: 160px;
-  height: 24px;
   top: 11px;
   left: 113px;
   margin: 0;
-  width: 160px;
-  height: 24px;
   top: 11px;
   left: 113px;
   color: rgba(0, 0, 0, 1);
@@ -53,8 +49,6 @@
 
 .header__username {
   margin: 0;
-  width: 157px;
-  height: 25px;
   top: 8px;
   left: 1151px;
   font-family: "Cabinet Grotesk", sans-serif;

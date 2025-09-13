@@ -29,6 +29,7 @@
   font-size: 12px;
   color: white;
   user-select: none;
+  justify-content: space-between;
 }
 
 .toggle-switch__text {
@@ -43,7 +44,6 @@
   font-size: 14px;
   line-height: 100%;
   letter-spacing: 0%;
-  background-color: rgba(255, 255, 255, 1);
   font-family: "Cabinet Grotesk";
 }
 
@@ -55,9 +55,8 @@
   font-size: 14px;
   line-height: 100%;
   letter-spacing: 0%;
-  text-align: center;
+  text-align: right;
   vertical-align: middle;
-  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .toggle-switch__checkbox:checked ~ .toggle-switch__circle {

@@ -8,24 +8,20 @@
 }
 
 .profile__sidebar {
-  display: flex;
   flex-direction: column;
   flex: 325px;
   height: 56px;
   top: 119px;
   left: 40px;
-  border: 1px solid rgba(0, 0, 0, 0.5);
+  border: 1px;
 }
 
 .sidebar__username {
-  width: 157px;
-  height: 25px;
-  color: #ffff;
+  width: 200px;
   font-family: "Cabinet Grotesk", sans-serif;
   font-weight: 700;
   font-size: 20px;
   line-height: 100%;
-  background-color: rgba(0, 0, 0, 1);
 }
 
 /* ClothesSection container inside profile */

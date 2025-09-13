@@ -1,0 +1,27 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  background-color: #f8f9fa; /* Match the app's light background */
+}
+
+.sidebar__user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Slightly tighter gap to match the design */
+}
+
+.sidebar__avatar img {
+  width: 48px; /* Slightly smaller to match the interface */
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #007bff; /* Blue border like in the image */
+}
+
+.sidebar__username {
+  font-weight: 500;
+  color: #333;
+  font-size: 16px;
+}
