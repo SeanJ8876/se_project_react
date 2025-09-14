@@ -1,12 +1,24 @@
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
-import { useform } from "../../hooks/useForm";
+import { useForm } from "../../hooks/useForm";
 
 const AddItemModal = ({ isOpen, onAddItem, onClose }) => {
   const defaultValues = { name: "", imageUrl: "", weather: "" };
-  const { values, handleChange } = useform({ defaultValues });
+  const { values, handleChange } = useForm({ defaultValues });
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
+
+    // Basic validation
+    const isValidImageUrl = (url) =>
+      /^https?:\/\/.+\.(jpg|jpeg|png|webp|gif|svg)$/i.test(url);
+
+    if (!isValidImageUrl(values.imageUrl)) {
+      alert(
+        "Please enter a valid image URL (must start with http and end with .jpg, .png, etc)"
+      );
+      return;
+    }
+
     onAddItem(values);
   };
 

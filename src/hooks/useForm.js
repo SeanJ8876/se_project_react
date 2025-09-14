@@ -1,6 +1,7 @@
 import { useState } from "react";
 
-export function useform(defaultValues) {
+export function useForm(defaultValues) {
+  // Changed from useform to useForm
   const [values, setValues] = useState(defaultValues);
 
   function handleChange(evt) {
@@ -14,3 +15,5 @@ export function useform(defaultValues) {
     handleChange,
   };
 }
+
+export default useForm; // Now this matches the function name above

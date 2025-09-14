@@ -1,16 +1,22 @@
 import "./ClothesSection.css";
-import { defaultClothingItems } from "../../utils/constants";
 import ItemCard from "../ItemCard/ItemCard";
 
-function ClothesSection({ onCardClick, weatherData }) {
+function ClothesSection({
+  onCardClick,
+  weatherData,
+  clothingItems,
+  onAddClick,
+}) {
   return (
     <div className="clothes-section">
       <div className="clothes-section__header">
         <p className="clothes-section__title">Your items</p>
-        <button className="clothes-section__add-btn">+ Add New</button>
+        <button className="clothes-section__add-btn" onClick={onAddClick}>
+          + Add New
+        </button>
       </div>
       <ul className="clothes-section__items">
-        {defaultClothingItems
+        {clothingItems
           .filter((item) => {
             return weatherData?.type ? item.weather === weatherData.type : true;
           })

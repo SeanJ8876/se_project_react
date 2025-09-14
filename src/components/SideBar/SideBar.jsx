@@ -1,4 +1,3 @@
-import "../SideBar/SideBar";
 import "./SideBar.css";
 import img from "../../assets/avatar-profile.png";
 
