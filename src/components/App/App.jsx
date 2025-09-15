@@ -56,7 +56,7 @@ function App() {
         closeActiveModal();
       })
       .catch((error) => {
-        console.error("Error adding item:", error);
+        console.error("error");
       });
   };
 
@@ -69,7 +69,7 @@ function App() {
         closeActiveModal();
       })
       .catch((error) => {
-        console.error("Error deleting item:", error);
+        console.error("error");
       });
   };
 
