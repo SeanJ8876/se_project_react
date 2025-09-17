@@ -3,11 +3,7 @@ import { Routes, Route } from "react-router-dom";
 
 import Header from "../Header/Header";
 import "./App.css";
-import {
-  coordinates,
-  APIkey,
-  defaultClothingItems,
-} from "../../utils/constants";
+import { coordinates, APIkey } from "../../utils/constants";
 import Main from "../Main/Main";
 import Footer from "../Footer/Footer";
 import AddItemModal from "../AddItemModal/AddItemModal";
@@ -26,7 +22,7 @@ function App() {
   });
   const [activeModal, setActiveModal] = useState("");
   const [selectedCard, setSelectedCard] = useState([]);
-  const [clothingItems, setClothingItems] = useState(defaultClothingItems);
+  const [clothingItems, setClothingItems] = useState([]);
   const [currentTemperatureUnit, setCurrentTemperatureUnit] = useState("F");
 
   const handleToggleSwitchChange = () => {
@@ -84,7 +80,6 @@ function App() {
       })
       .catch((error) => {
         console.error(error);
-        setClothingItems(defaultClothingItems);
       });
   }, []);
 
@@ -95,6 +90,17 @@ function App() {
         setWeatherData(filteredWeatherData);
       })
       .catch((err) => console.log(err));
+  }, []);
+
+  useEffect(() => {
+    const closeByEscape = (e) => {
+      if (e.key === "Escape") {
+        closeActiveModal();
+      }
+    };
+    document.addEventListener("keydown", closeByEscape);
+
+    return () => document.removeEventListener("keydown", closeByEscape);
   }, []);
 
   return (

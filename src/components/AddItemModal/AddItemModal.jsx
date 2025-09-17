@@ -3,14 +3,13 @@ import { useForm } from "../../hooks/useForm";
 
 const AddItemModal = ({ isOpen, onAddItem, onClose }) => {
   const defaultValues = { name: "", imageUrl: "", weather: "" };
-  const { values, handleChange } = useForm({ defaultValues });
+  const { values, handleChange, resetForm } = useForm(defaultValues);
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
 
     // Basic validation
-    const isValidImageUrl = (url) =>
-      /^https?:\/\/.+\.(jpg|jpeg|png|webp|gif|svg)$/i.test(url);
+    const isValidImageUrl = (url) => /^https?:\/\/.+$/i.test(url);
 
     if (!isValidImageUrl(values.imageUrl)) {
       alert(
@@ -20,6 +19,7 @@ const AddItemModal = ({ isOpen, onAddItem, onClose }) => {
     }
 
     onAddItem(values);
+    resetForm(); // Use the resetForm from useForm hook
   };
 
   return (
@@ -33,6 +33,7 @@ const AddItemModal = ({ isOpen, onAddItem, onClose }) => {
       <label htmlFor="name" className="modal__label">
         Name{" "}
         <input
+          name="name"
           type="text"
           className="modal__input"
           id="name"
@@ -44,6 +45,7 @@ const AddItemModal = ({ isOpen, onAddItem, onClose }) => {
       <label htmlFor="imageUrl" className="modal__label">
         Image{" "}
         <input
+          name="imageUrl"
           type="text"
           className="modal__input"
           id="imageUrl"
@@ -61,6 +63,7 @@ const AddItemModal = ({ isOpen, onAddItem, onClose }) => {
             type="radio"
             className="modal__radio-input"
             value="hot"
+            checked={values.weather === "hot"}
             onChange={handleChange}
           />{" "}
           Hot
@@ -72,6 +75,7 @@ const AddItemModal = ({ isOpen, onAddItem, onClose }) => {
             type="radio"
             className="modal__radio-input"
             value="warm"
+            checked={values.weather === "warm"}
             onChange={handleChange}
           />{" "}
           Warm
@@ -83,6 +87,7 @@ const AddItemModal = ({ isOpen, onAddItem, onClose }) => {
             type="radio"
             className="modal__radio-input"
             value="cold"
+            checked={values.weather === "cold"}
             onChange={handleChange}
           />{" "}
           Cold

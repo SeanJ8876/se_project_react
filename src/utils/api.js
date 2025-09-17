@@ -1,13 +1,24 @@
 const baseUrl = "http://localhost:3001";
 
-const getItems = () => {
-  return fetch(`${baseUrl}/items`).then((res) => {
-    if (res.ok) {
-      return res.json();
-    }
-    return Promise.reject(`Error: ${res.status}`);
-  });
+const checkResponse = (res) => {
+  if (res.ok) {
+    return res.json();
+  }
+  return Promise.reject(`Error: ${res.status}`);
 };
+
+const getItems = () => {
+  return fetch(`${baseUrl}/items`).then(checkResponse);
+};
+
+fetch("")
+  .then(checkResponse)
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
 
 const addItem = (item) => {
   return fetch(`${baseUrl}/items`, {
@@ -16,12 +27,7 @@ const addItem = (item) => {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(item),
-  }).then((res) => {
-    if (res.ok) {
-      return res.json();
-    }
-    return Promise.reject(`Error: ${res.status}`);
-  });
+  }).then(checkResponse);
 };
 
 const removeItem = (id) => {
