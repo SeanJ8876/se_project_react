@@ -74,8 +74,10 @@ function App() {
   };
 
   useEffect(() => {
+    console.log(1)
     getItems()
       .then((data) => {
+        console.log(3)
         setClothingItems(data);
       })
       .catch((error) => {

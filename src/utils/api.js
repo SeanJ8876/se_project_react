@@ -1,6 +1,6 @@
 const baseUrl = "http://localhost:3001";
 
-const checkResponse = (res) => {
+export const checkResponse = (res) => {
   if (res.ok) {
     return res.json();
   }
@@ -8,17 +8,9 @@ const checkResponse = (res) => {
 };
 
 const getItems = () => {
+  console.log(2);
   return fetch(`${baseUrl}/items`).then(checkResponse);
 };
-
-fetch("")
-  .then(checkResponse)
-  .then((data) => {
-    console.log(data);
-  })
-  .catch((error) => {
-    console.error(error);
-  });
 
 const addItem = (item) => {
   return fetch(`${baseUrl}/items`, {
@@ -36,13 +28,7 @@ const removeItem = (id) => {
     headers: {
       "Content-Type": "application/json",
     },
-  }).then((res) => {
-    if (!res.ok) {
-      return Promise.reject(`Error: ${res.status}`);
-    }
-    // If status is 204, no content to parse
-    return res.status === 204 ? {} : res.json();
-  });
+  }).then(checkResponse);
 };
 
 export { getItems, addItem, removeItem };
