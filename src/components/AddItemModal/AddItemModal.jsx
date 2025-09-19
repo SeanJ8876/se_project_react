@@ -1,5 +1,6 @@
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 import { useForm } from "../../hooks/useForm";
+import { useEffect } from "react";
 
 const AddItemModal = ({ isOpen, onAddItem, onClose }) => {
   const defaultValues = { name: "", imageUrl: "", weather: "" };
@@ -19,8 +20,11 @@ const AddItemModal = ({ isOpen, onAddItem, onClose }) => {
     }
 
     onAddItem(values);
-    resetForm(); // Use the resetForm from useForm hook
   };
+
+  useEffect(() => {
+    resetForm();
+  }, [isOpen]);
 
   return (
     <ModalWithForm
