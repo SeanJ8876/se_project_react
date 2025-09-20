@@ -40,21 +40,24 @@ function App() {
   };
 
   const onAddItem = (inputValues) => {
-    const newCardData = {
-      name: inputValues.name,
-      link: inputValues.imageUrl,
-      weather: inputValues.weather,
-    };
-
-    addItem(newCardData)
+    addItem(inputValues)
       .then((serverItem) => {
         setClothingItems([serverItem, ...clothingItems]);
         closeActiveModal();
       })
       .catch((error) => {
-        console.error("error");
+        console.error(error);
       });
   };
+
+  addItem(newCardData)
+    .then((serverItem) => {
+      setClothingItems([serverItem, ...clothingItems]);
+      closeActiveModal();
+    })
+    .catch((error) => {
+      console.error(error);
+    });
 
   const onDeleteItem = (item) => {
     removeItem(item._id)
@@ -65,7 +68,7 @@ function App() {
         closeActiveModal();
       })
       .catch((error) => {
-        console.error("error");
+        console.error(error);
       });
   };
 
@@ -74,10 +77,10 @@ function App() {
   };
 
   useEffect(() => {
-    console.log(1)
+    console.log(1);
     getItems()
       .then((data) => {
-        console.log(3)
+        console.log(3);
         setClothingItems(data);
       })
       .catch((error) => {
