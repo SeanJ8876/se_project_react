@@ -50,15 +50,6 @@ function App() {
       });
   };
 
-  addItem(newCardData)
-    .then((serverItem) => {
-      setClothingItems([serverItem, ...clothingItems]);
-      closeActiveModal();
-    })
-    .catch((error) => {
-      console.error(error);
-    });
-
   const onDeleteItem = (item) => {
     removeItem(item._id)
       .then(() => {
