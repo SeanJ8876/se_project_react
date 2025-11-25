@@ -31,4 +31,39 @@ const removeItem = (id) => {
   }).then(checkResponse);
 };
 
-export { getItems, addItem, removeItem };
+const addCardLike = (id) => {
+  return fetch(`${baseUrl}/items/${id}/likes`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  }).then(checkResponse);
+};
+
+const removeCardLike = (id) => {
+  return fetch(`${baseUrl}/items/${id}/likes`, {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  }).then(checkResponse);
+};
+
+const updateUserProfile = (userData) => {
+  return fetch(`${baseUrl}/users/me`, {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(userData),
+  }).then(checkResponse);
+};
+
+export {
+  getItems,
+  addItem,
+  removeItem,
+  addCardLike,
+  removeCardLike,
+  updateUserProfile,
+};
