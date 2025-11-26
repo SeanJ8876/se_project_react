@@ -1,12 +1,6 @@
-const baseUrl = "http://localhost:3001";
+import { checkResponse } from "./api";
 
-// Check response and return data or reject with error
-function checkResponse(res) {
-  if (res.ok) {
-    return res.json();
-  }
-  return Promise.reject(`Error: ${res.status}`);
-}
+const baseUrl = "http://localhost:3001";
 
 // Register a new user
 export const register = ({ name, avatar, email, password }) => {
@@ -36,7 +30,7 @@ export const checkToken = (token) => {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
-      authorization: `Bearer ${token}`,
+      Authorization: `Bearer ${token}`,
     },
   }).then(checkResponse);
 };

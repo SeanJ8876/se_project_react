@@ -3,7 +3,7 @@ import { Routes, Route, useNavigate } from "react-router-dom";
 
 import Header from "../Header/Header";
 import "./App.css";
-import { coordinates, APIkey } from "../../utils/constants";
+import { coordinates, apiKey } from "../../utils/constants";
 import Main from "../Main/Main";
 import Footer from "../Footer/Footer";
 import AddItemModal from "../AddItemModal/AddItemModal";
@@ -213,7 +213,7 @@ function App() {
 
   // Get weather data on mount
   useEffect(() => {
-    getWeather(coordinates, APIkey)
+    getWeather(coordinates, apiKey)
       .then((data) => {
         const filteredWeatherData = filterWeatherData(data);
         setWeatherData(filteredWeatherData);
@@ -267,6 +267,7 @@ function App() {
                       onCardClick={handleCardClick}
                       clothingItems={clothingItems}
                       onAddClick={handleAddClick}
+                      weatherData={weatherData}
                       onEditProfileClick={handleEditProfileClick}
                       onLogout={handleLogout}
                       onCardLike={handleCardLike}

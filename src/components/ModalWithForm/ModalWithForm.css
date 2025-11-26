@@ -67,11 +67,6 @@ img.modal__close-icon {
   color: #64748b;
 }
 
-.modal__close:hover {
-  background-color: #f1f5f9;
-  color: #64748b;
-}
-
 .modal__form {
   display: flex;
   flex-direction: column;

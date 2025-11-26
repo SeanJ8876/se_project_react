@@ -1,4 +1,4 @@
-import "./WeatherCard.css";
+import "./Weathercard.css";
 import { weatherOptions, defaultWeatherOptions } from "../../utils/constants";
 import "../../assets/day/clear.png";
 import { useContext } from "react";

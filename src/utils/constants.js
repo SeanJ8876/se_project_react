@@ -2,42 +2,42 @@ const weatherOptions = [
   {
     day: true,
     condition: "Clear",
-    url: new URL("../assets/day/clear.png", import.meta.url).href,
+    url: new URL("../assets/day/clear.jpg", import.meta.url).href,
   },
   {
     day: true,
     condition: "Cloudy",
-    url: new URL("../assets/day/cloudy.png", import.meta.url).href,
+    url: new URL("../assets/day/cloudy.jpg", import.meta.url).href,
   },
   {
     day: false,
     condition: "clear",
-    url: new URL("../assets/night/clear.png", import.meta.url).href,
+    url: new URL("../assets/night/clear.jpg", import.meta.url).href,
   },
   {
     day: false,
     condition: "cloudy",
-    url: new URL("../assets/night/cloudy.png", import.meta.url).href,
+    url: new URL("../assets/night/cloudy.jpg", import.meta.url).href,
   },
   {
     day: true,
     condition: "Day-rain",
-    url: new URL("../assets/day/day-rain.png", import.meta.url).href,
+    url: new URL("../assets/day/day-rain.jpg", import.meta.url).href,
   },
   {
     day: true,
     condition: "day-storm",
-    url: new URL("../assets/day/day-storm.png", import.meta.url).href,
+    url: new URL("../assets/day/day-storm.jpg", import.meta.url).href,
   },
   {
     day: false,
     condition: "night-rain",
-    url: new URL("../assets/night/night-rain.png", import.meta.url).href,
+    url: new URL("../assets/night/night-rain.jpg", import.meta.url).href,
   },
   {
     day: false,
     condition: "night-storm",
-    url: new URL("../assets/night/night-storm.png", import.meta.url).href,
+    url: new URL("../assets/night/night-storm.jpg", import.meta.url).href,
   },
 ];
 
@@ -142,10 +142,10 @@ export const defaultClothingItems = [
 
 export const defaultWeatherOptions = {
   day: {
-    url: new URL("../assets/day/default.png", import.meta.url).href,
+    url: new URL("../assets/day/default.jpg", import.meta.url).href,
   },
   night: {
-    url: new URL("../assets/night/default.png", import.meta.url).href,
+    url: new URL("../assets/night/default.jpg", import.meta.url).href,
   },
 };
 
@@ -156,4 +156,4 @@ export const coordinates = {
 
 export default defaultClothingItems;
 export { weatherOptions };
-export const APIkey = "d29798e4024f78d80831f74c99475f48";
+export const apiKey = "d29798e4024f78d80831f74c99475f48";
