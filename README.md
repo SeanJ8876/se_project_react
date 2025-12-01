@@ -23,7 +23,8 @@ OpenWeatherMap API - Real-time weather data
 Fetch API - HTTP requests for weather data
 Vite - Build tool and development server
 
-Deployment link: https://github.com/SeanJ8876/se_project_react.git
+Deployment link: https://github.com/SeanJ8876/se_project_react.git 
+Backend Link:  https://github.com/SeanJ8876/se_project_express
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
