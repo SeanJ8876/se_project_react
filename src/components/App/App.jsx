@@ -221,17 +221,23 @@ function App() {
       .catch((err) => console.log(err));
   }, []);
 
-  // Close modal with Escape key
   useEffect(() => {
+    if (!activeModal) return; // stop the effect if there is no active modal
+
     const closeByEscape = (e) => {
+      // define the function inside useEffect
       if (e.key === "Escape") {
         closeActiveModal();
       }
     };
+
     document.addEventListener("keydown", closeByEscape);
 
-    return () => document.removeEventListener("keydown", closeByEscape);
-  }, []);
+    return () => {
+      // clean up function to remove the listener
+      document.removeEventListener("keydown", closeByEscape);
+    };
+  }, [activeModal]); // watch activeModal
 
   return (
     <CurrentUserContext.Provider value={currentUser}>

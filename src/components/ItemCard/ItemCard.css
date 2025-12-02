@@ -21,3 +21,25 @@
   width: 100%;
 }
 
+.card__like-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 18px;
+  background-image: url("");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.card__like-btn:hover {
+  opacity: 0.6;
+}
+
+.card__like-btn_active {
+  background-image: url("");
+}

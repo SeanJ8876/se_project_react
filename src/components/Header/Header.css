@@ -1,6 +1,7 @@
 .header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 32px 0 28px;
 }
 
@@ -18,7 +19,7 @@
 .header__date-and-location {
   top: 11px;
   left: 113px;
-  margin: 0;
+  margin-right: auto;
   left: 113px;
   color: rgba(0, 0, 0, 1);
   font-family: "Cabinet Grotesk", sans-serif;

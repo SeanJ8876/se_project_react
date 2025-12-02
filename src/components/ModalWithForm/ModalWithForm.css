@@ -104,6 +104,32 @@ img.modal__close-icon {
   border-bottom-width: 2px;
 }
 
+.modal__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: auto;
+}
+
+.modal__alternative-button {
+  background: transparent;
+  border: none;
+  color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  font-family: "Cabinet Grotesk";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration: underline;
+  padding: 0;
+  align-self: flex-start;
+  transition: color 0.2s ease;
+}
+
+.modal__alternative-button:hover {
+  color: rgba(0, 0, 0, 0.8);
+}
+
 .modal__input::placeholder {
   color: #9ca3af;
 }
@@ -187,7 +213,6 @@ img.modal__close-icon {
   font-size: 14px;
   transition: all 0.2s ease;
   align-self: flex-start;
-  margin-top: auto;
 }
 
 .modal__submit:hover {
