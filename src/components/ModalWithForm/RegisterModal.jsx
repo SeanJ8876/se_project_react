@@ -2,7 +2,7 @@ import { useState } from "react";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 
 function RegisterModal({ isOpen, onClose, onRegister, onSignInClick }) {
-  const [email, setEmail] = useState("");
+  const [email, setEmail, useForm] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
   const [avatar, setAvatar] = useState("");
@@ -33,6 +33,7 @@ function RegisterModal({ isOpen, onClose, onRegister, onSignInClick }) {
     setPassword("");
     setName("");
     setAvatar("");
+    useForm("");
   };
 
   const handleClose = () => {

@@ -51,6 +51,21 @@
   color: rgba(0, 0, 0, 1);
 }
 
+.modal__close {
+  position: absolute;
+  top: 28px;
+  right: 28px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 img.modal__close-icon {
   padding: 0;
   width: 24px;
@@ -107,8 +122,43 @@ img.modal__close-icon {
 .modal__buttons {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  margin-top: auto;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.modal__submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 124px;
+  height: 36px;
+  background-color: black;
+  gap: 12px;
+  border-radius: 4px;
+  padding: 4px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-family: "Cabinet Grotesk";
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  align-self: flex-start;
+}
+
+.modal__submit:hover {
+  background-color: #6b7280;
+  transform: translateY(-1px);
+}
+
+.modal__submit:active {
+  transform: translateY(0);
+}
+
+.modal__submit:disabled {
+  background-color: #d1d5db;
+  cursor: not-allowed;
+  transform: none;
 }
 
 .modal__alternative-button {
@@ -193,41 +243,6 @@ img.modal__close-icon {
   font-size: 16px;
   line-height: 20px;
   margin: 0;
-}
-
-.modal__submit {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 124px;
-  height: 36px;
-  background-color: black;
-  gap: 12px;
-  border-radius: 4px;
-  padding: 4px;
-  color: white;
-  border: none;
-  cursor: pointer;
-  font-family: "Cabinet Grotesk";
-  font-weight: 500;
-  font-size: 14px;
-  transition: all 0.2s ease;
-  align-self: flex-start;
-}
-
-.modal__submit:hover {
-  background-color: #6b7280;
-  transform: translateY(-1px);
-}
-
-.modal__submit:active {
-  transform: translateY(0);
-}
-
-.modal__submit:disabled {
-  background-color: #d1d5db;
-  cursor: not-allowed;
-  transform: none;
 }
 
 .modal__form-group {
