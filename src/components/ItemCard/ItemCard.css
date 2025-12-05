@@ -6,8 +6,6 @@
 }
 
 .card__name {
-  position: absolute;
-  top: 15px;
   margin: 0;
   padding: 2px 12px 2px 12px;
   font-weight: 700;
@@ -21,10 +19,16 @@
   width: 100%;
 }
 
-.card__like-btn {
+.card__header {
+  display: flex;
   position: absolute;
-  top: 10px;
-  right: 10px;
+  align-items: center;
+  gap: 10px;
+  top: 15px;
+  background-color: red;
+}
+
+.card__like-btn {
   width: 20px;
   height: 18px;
   background-image: url("../../assets/hearts.svg");
@@ -41,5 +45,5 @@
 }
 
 .card__like-btn_active {
-  background-image: url("");
+  background-image: url("../../assets/Heart-Black.svg");
 }
