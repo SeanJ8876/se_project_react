@@ -25,7 +25,6 @@
   align-items: center;
   gap: 10px;
   top: 15px;
-  background-color: red;
 }
 
 .card__like-btn {
@@ -37,7 +36,8 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
-  transition: opacity 0.3s ease;
+  /* transition: opacity 0.3s ease; */
+  opacity: 1;
 }
 
 .card__like-btn:hover {
